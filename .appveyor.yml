@@ -2,3 +2,10 @@ version: 1.0.{build}
 build_script:
 - cmd: echo "test build..."
 test: off
+
+#---------------------------------#
+#  Skip builds for doc changes    #
+#---------------------------------#
+skip_commits:
+  # Regex for matching commit message
+  message: /\(doc\).*/
